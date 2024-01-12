@@ -1,0 +1,267 @@
+:root{
+    --main-color:#3b4664;
+    --main-text-color: #FEFFFF;
+
+    --box-background-color:#252d44;
+    --switch-button-color:#d13f32;
+
+    --input-box-color:#181F32;
+
+    --number-button-background-color: #eae3db;
+    --number-button-text-color: #3b4664;
+    --number-button-padding-color: #B2A295;
+
+    --deletereset-button-background-color: #647299;
+    --deletereset-button-padding-color: #404E75;
+
+    --equal-button-background-color: #d13f32;
+    --equal-button-padding-color:#8F2316;
+
+    --deletereset-button-text-color:#FEFFFF;
+    --equal-button-text-color:#FEFFFF;
+}
+
+html[data-theme="theme2"]{
+    --main-color:#e6e6e6;
+    --main-text-color: #333329;
+
+    --input-box-color:#EEEEEE;
+
+    --box-background-color:#D3CDCD;
+    --switch-button-color:#C85401;
+
+    --number-button-background-color: #E5E4E0;
+    --number-button-text-color: #363530;
+    --number-button-padding-color: #A79D93;
+
+    --deletereset-button-background-color: #388187;
+    --deletereset-button-padding-color: #1B6067;
+
+    --equal-button-background-color: #C85401;
+    --equal-button-padding-color:#893A02;
+
+    --deletereset-button-text-color:#FEFFFF;
+    --equal-button-text-color:#FEFFFF;
+}
+
+html[data-theme="theme3"]{
+    --main-color:#17062A;
+    --main-text-color: #FFEB43;
+
+    --input-box-color:#1E0836;
+
+    --box-background-color:#1E0836;
+    --switch-button-color:#03DAD2;
+
+    --number-button-background-color: #331B4D;
+    --number-button-text-color: #FFEB43;
+    --number-button-padding-color: #851C9C;
+
+    --deletereset-button-background-color: #56077C;
+    --deletereset-button-padding-color: #BA18F5;
+
+    --equal-button-background-color: #00DECF;
+    --equal-button-padding-color:#6DFAF1;
+
+    --deletereset-button-text-color:#FEFFFF;
+    --equal-button-text-color:#003035;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-color);
+    font-family: "League Spartan", sans-serif;
+    color: var(--main-text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+h1{
+    font-size: 28px;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+input, button{
+    font-family: "League Spartan", sans-serif;
+}
+
+input{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+button{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.calculator{
+    padding-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.calculator-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-box{
+    display: flex;
+    align-items:end;
+}
+
+.theme-box>h3{
+    margin-right: 10px;
+}
+
+.theme-number{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+.switchslider-box{
+    margin-top: 3px;
+    width: 100%;
+    background-color: var(--box-background-color);
+    border-radius: 50px;
+    transition: all 0.3 e;
+}
+
+.switchslider{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.switchslider>button{
+    border-radius: 100%;
+    padding: 8px;
+    margin: 0px 3px;
+}
+
+
+.active-theme{
+    background-color: var(--switch-button-color);
+}
+
+.inactive-theme{
+    background-color: transparent;
+}
+
+.calculator-display{
+    margin-top: 30px;
+}
+
+.calculator-display>input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: right;
+    background-color: var(--input-box-color);
+    color: var(--main-text-color);
+}
+
+.calculator-grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 13px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: var(--box-background-color);
+}
+
+.calculator-grid>button{
+    padding: 17px 0px;
+    border-radius: 10px;
+}
+
+.calculator-grid>button:hover{
+    -webkit-filter: brightness(150%);
+}
+
+.number-button{
+    background-color: var(--number-button-background-color);
+    color: var(--number-button-text-color);
+    border-bottom: 3px var(--number-button-padding-color) solid;
+}
+
+.deletereset-button{
+    font-size: 20px;
+    background-color: var(--deletereset-button-background-color);
+    color: var(--deletereset-button-text-color);
+    font-weight: 500;
+    border-bottom: 3px var(--deletereset-button-padding-color) solid;
+}
+
+.reset-button{
+    grid-column: 1/3;
+}
+
+.equal-button{
+    grid-column: 3/5;
+    background-color: var(--equal-button-background-color);
+    color: var(--equal-button-text-color);
+    border-bottom: 3px var(--equal-button-padding-color) solid;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="theme1">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="calculator-head">
+                <h1>calc</h1>
+                <div class="theme-box">
+                    <h3>THEME</h3>
+                    <div>
+                        <div class="theme-slider-box">
+                            <div class="theme-number">
+                                <h3>1</h3>
+                                <h3>2</h3>
+                                <h3>3</h3>
+                            </div>
+                            <div class="switchslider-box">
+                                <div class="switchslider">
+                                    <div class="sliding-circle"></div>
+                                    <button id="theme1-button" class="active-theme" onclick="theme1set()"></button>
+                                    <button id="theme2-button" class="inactive-theme" onclick="theme2set()"></button>
+                                    <button id="theme3-button" class="inactive-theme" onclick="theme3set()"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator-display">
+                <input type="text" name="calculator-input" id="calculator-input">
+            </div>
+            <div class="calculator-grid">
+                <button class="number-button" onclick="inputNumber(7)">7</button>
+                <button class="number-button" onclick="inputNumber(8)">8</button>
+                <button class="number-button" onclick="inputNumber(9)">9</button>
+                <button class="deletereset-button" onclick="backspace()">DEL</button>
+                <button class="number-button" onclick="inputNumber(4)">4</button>
+                <button class="number-button" onclick="inputNumber(5)">5</button>
+                <button class="number-button" onclick="inputNumber(6)">6</button>
+                <button class="number-button" onclick="mathOperator('+')">+</button>
+                <button class="number-button" onclick="inputNumber(1)">1</button>
+                <button class="number-button" onclick="inputNumber(2)">2</button>
+                <button class="number-button" onclick="inputNumber(3)">3</button>
+                <button class="number-button" onclick="mathOperator('-')">-</button>
+                <button class="number-button" onclick="mathOperator('.')">.</button>
+                <button class="number-button" onclick="inputNumber(0)">0</button>
+                <button class="number-button" onclick="mathOperator('/')">/</button>
+                <button class="number-button" onclick="mathOperator('*')">x</button>
+                <button class="deletereset-button reset-button" onclick="clearInput()">RESET</button>
+                <button class="equal-button" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
